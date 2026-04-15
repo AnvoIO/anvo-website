@@ -1,0 +1,7 @@
+# Canonical host: https://anvo.io
+# Anything arriving via the Cloudflare-Pages default URL (*.pages.dev) or
+# www. is 301'd to the apex. `:splat` preserves the path, `!` forces the
+# redirect over any filesystem match.
+https://anvo-website.pages.dev/*   https://anvo.io/:splat   301!
+https://*.anvo-website.pages.dev/* https://anvo.io/:splat   301!
+https://www.anvo.io/*              https://anvo.io/:splat   301!
