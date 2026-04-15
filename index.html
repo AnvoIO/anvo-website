@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anvo Network — a next-generation public blockchain. Coming soon.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0a0a0c">
+    <meta property="og:title" content="Anvo Network">
+    <meta property="og:description" content="A next-generation public blockchain. Coming soon.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anvo.io">
+    <title>Anvo Network — Coming Soon</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        :root {
+            --bg:        #0a0a0c;
+            --fg:        #f2f2f4;
+            --muted:     #6b6b74;
+            --accent:    #7ee3a4;
+            --grid:      rgba(255,255,255,0.035);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-feature-settings: "ss01", "cv02", "cv03", "cv04";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+            min-height: 100dvh;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+            -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 75%);
+            pointer-events: none;
+        }
+        main {
+            position: relative;
+            text-align: center;
+            padding: 2rem;
+            max-width: 40rem;
+        }
+        .mark {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(180deg, #ffffff 40%, #a9a9b3 120%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .tagline {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: var(--muted);
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            margin-bottom: 2.5rem;
+        }
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.55rem 1rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: var(--fg);
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+        .repos {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .repos a {
+            padding: 0.45rem 0.85rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: var(--fg);
+            text-decoration: none;
+            background: rgba(255,255,255,0.02);
+            transition: border-color 0.15s ease, background 0.15s ease;
+        }
+        .repos a:hover, .repos a:focus-visible {
+            border-color: rgba(126,227,164,0.5);
+            background: rgba(126,227,164,0.05);
+            outline: none;
+        }
+        .repos a code {
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+            font-size: 0.78rem;
+            color: var(--accent);
+        }
+        .status .dot {
+            width: 0.5rem; height: 0.5rem;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 0 var(--accent);
+            animation: pulse 2.4s ease-out infinite;
+        }
+        @keyframes pulse {
+            0%   { box-shadow: 0 0 0 0   rgba(126,227,164,0.55); }
+            70%  { box-shadow: 0 0 0 10px rgba(126,227,164,0);   }
+            100% { box-shadow: 0 0 0 0   rgba(126,227,164,0);   }
+        }
+        footer {
+            position: absolute;
+            bottom: 1.5rem; left: 0; right: 0;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--muted);
+            letter-spacing: 0.04em;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .status .dot { animation: none; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="mark">Anvo</div>
+        <p class="tagline">A next-generation public blockchain. Coming soon.</p>
+        <div class="status"><span class="dot" aria-hidden="true"></span>Under development</div>
+        <nav class="repos" aria-label="Open-source projects">
+            <a href="https://github.com/AnvoIO/core" rel="noopener"><code>core</code></a>
+            <a href="https://github.com/AnvoIO/core-node" rel="noopener"><code>core-node</code></a>
+            <a href="https://github.com/AnvoIO/cdt" rel="noopener"><code>cdt</code></a>
+            <a href="https://github.com/AnvoIO/cdt-musl" rel="noopener"><code>cdt-musl</code></a>
+            <a href="https://github.com/AnvoIO/anvo-test" rel="noopener"><code>anvo-test</code></a>
+            <a href="https://github.com/AnvoIO/system-contracts" rel="noopener"><code>system-contracts</code></a>
+            <a href="https://github.com/AnvoIO" rel="noopener">github.com/AnvoIO</a>
+        </nav>
+    </main>
+    <footer>anvo.io</footer>
+</body>
+</html>
