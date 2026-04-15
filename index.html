@@ -11,7 +11,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anvo.io">
     <title>Anvo Network — Coming Soon</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/assets/anvo.png">
+    <link rel="apple-touch-icon" href="/assets/anvo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
         :root {
@@ -53,16 +54,14 @@
             padding: 2rem;
             max-width: 40rem;
         }
-        .mark {
-            font-size: clamp(3rem, 10vw, 6rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1;
-            margin-bottom: 1.25rem;
-            background: linear-gradient(180deg, #ffffff 40%, #a9a9b3 120%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        .logo {
+            display: block;
+            margin: 0 auto 1.5rem;
+            width: clamp(140px, 30vw, 220px);
+            height: auto;
+            filter: invert(1);
+            mix-blend-mode: screen;
+            user-select: none;
         }
         .tagline {
             font-size: clamp(1rem, 2vw, 1.15rem);
@@ -140,7 +139,7 @@
 </head>
 <body>
     <main>
-        <div class="mark">Anvo</div>
+        <img class="logo" src="/assets/anvo.png" alt="Anvo" width="150" height="150">
         <p class="tagline">A next-generation public blockchain. Coming soon.</p>
         <div class="status"><span class="dot" aria-hidden="true"></span>Under development</div>
         <nav class="repos" aria-label="Open-source projects">
